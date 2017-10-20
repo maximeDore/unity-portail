@@ -1,0 +1,330 @@
+fileFormatVersion: 2
+guid: d9dc0d985328c514195e27a97bf1666f
+timeCreated: 1506862621
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: perso0000
+    21300002: perso0001
+    21300004: perso0002
+    21300006: perso0003
+    21300008: perso0004
+    21300010: perso0005
+    21300012: perso0006
+    21300014: perso0007
+    21300016: perso0008
+    21300018: perso0009
+    21300020: perso0010
+    21300022: perso0011
+    21300024: perso0012
+    21300026: perso0013
+    21300028: perso0014
+    21300030: perso0015
+    21300032: Perso0000
+    21300034: Perso0001
+    21300036: Perso0002
+    21300038: Perso0003
+    21300040: Perso0004
+    21300042: Perso0005
+    21300044: Perso0006
+    21300046: Perso0007
+    21300048: Perso0008
+    21300050: Perso0009
+    21300052: Perso0010
+    21300054: Perso0011
+    21300056: Perso0012
+    21300058: Perso0013
+    21300060: Perso0014
+    21300062: Perso0015
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Perso0000
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 193
+        width: 47
+        height: 58
+      alignment: 9
+      pivot: {x: -0.68085104, y: 1.362069}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0001
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 194
+        width: 48
+        height: 57
+      alignment: 9
+      pivot: {x: -0.6666667, y: 1.3684211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0002
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 191
+        width: 48
+        height: 60
+      alignment: 9
+      pivot: {x: -0.6666667, y: 1.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0003
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 204
+        width: 58
+        height: 47
+      alignment: 9
+      pivot: {x: -0.55172414, y: 1.531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0004
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 143
+        width: 57
+        height: 48
+      alignment: 9
+      pivot: {x: -0.5614035, y: 1.5208334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0005
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 143
+        width: 61
+        height: 48
+      alignment: 9
+      pivot: {x: -0.5081967, y: 1.5208334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0006
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 144
+        width: 58
+        height: 47
+      alignment: 9
+      pivot: {x: -0.18965517, y: 1.531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0007
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 143
+        width: 57
+        height: 48
+      alignment: 9
+      pivot: {x: -0.19298245, y: 1.5208334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0008
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 94
+        width: 61
+        height: 49
+      alignment: 9
+      pivot: {x: -0.16393442, y: 1.4693878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0009
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 84
+        width: 48
+        height: 59
+      alignment: 9
+      pivot: {x: -0.6041667, y: 1.1525424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0010
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 85
+        width: 49
+        height: 58
+      alignment: 9
+      pivot: {x: -0.5510204, y: 1.1551725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0011
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 82
+        width: 49
+        height: 61
+      alignment: 9
+      pivot: {x: -0.59183675, y: 1.1147541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0012
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 15
+        width: 50
+        height: 67
+      alignment: 9
+      pivot: {x: -0.58, y: 1.3134328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0013
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 31
+        width: 69
+        height: 51
+      alignment: 9
+      pivot: {x: -0.46376812, y: 1.4901961}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0014
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 31
+        width: 69
+        height: 51
+      alignment: 9
+      pivot: {x: 0, y: 1.4313725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Perso0015
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 13
+        width: 50
+        height: 69
+      alignment: 9
+      pivot: {x: -0.6, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
