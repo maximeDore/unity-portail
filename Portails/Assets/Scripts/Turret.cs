@@ -13,8 +13,7 @@ public class Turret : MonoBehaviour {
 	private float _laserDistance = 4f;
 	private float _laserLongueur = 4f;
 	private float angle;
-	private Vector3 direction;
-	private float distance;
+	private Vector2 direction;
 
 	private Animator _animator;
 
@@ -31,7 +30,7 @@ public class Turret : MonoBehaviour {
 
 		// Suis le perso s'il est dans son champs de vision de 80deg
 		if(deltaX > _laserDistance*-1 && deltaX < _laserDistance && deltaY > _laserDistance*-1 && deltaY < _laserDistance && (angle <= 40 && angle >= -40)){
-			isSeeingPerso();
+			followPerso();
 		} else {
 			_laserLongueur = 4f;
 			_animator.applyRootMotion = false;
@@ -41,17 +40,20 @@ public class Turret : MonoBehaviour {
 	//Dessine un rayon laser devant la tourelle
     void OnDrawGizmos() {
         Gizmos.color = Color.red;
-        Vector3 direction = transform.TransformDirection(Vector3.left) * _laserLongueur;
+        direction = transform.TransformDirection(Vector2.left) * _laserLongueur;
         Gizmos.DrawRay(_laserEmitter.position, direction);
     }
 
-	bool isSeeingPerso() {
-		_laserLongueur = Vector2.Distance(_persoRef.position,transform.position);
-		transform.rotation = Quaternion.Euler(0,0,angle);
-		_animator.applyRootMotion = true;
-
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distance, raycastLayerMask);
-
-		return hit.collider==null;
+	//Suivi du personnage
+	void followPerso() {
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, _laserDistance, raycastLayerMask);
+		if(hit.collider != null && hit.collider.name=="PersoContainer"){
+			_laserLongueur = Vector2.Distance(_persoRef.position,transform.position);
+			transform.rotation = Quaternion.Euler(0,0,angle);
+			_animator.applyRootMotion = true;
+		} else {
+			_laserLongueur = 4f;
+			_animator.applyRootMotion = false;
+		}
 	}
 }

@@ -1,0 +1,43 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PressurePlate : MonoBehaviour {
+
+	[SerializeField]
+	private SpriteRenderer _power;
+	[SerializeField]
+	private Bridge _bridge;
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	public void PowerOn(){
+		_power.enabled = false;
+		_bridge.Deploy();
+	}
+
+	public void PowerOff(){
+		_power.enabled = true;
+		_bridge.Shut();
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.tag == "Cube"){
+			this.PowerOn();
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other) {
+		if(other.gameObject.tag == "Cube"){
+			this.PowerOff();
+		}
+	}
+}
