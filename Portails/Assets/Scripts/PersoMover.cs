@@ -5,7 +5,7 @@ using UnityEngine;
 public class PersoMover : MonoBehaviour {
 
 	// Propriétés
-	private float _speed = 3f;
+	private float _speed = 2f;
 	private Animator _animator;
 	private Rigidbody2D _rb;
 	private CircleCollider2D _collider;

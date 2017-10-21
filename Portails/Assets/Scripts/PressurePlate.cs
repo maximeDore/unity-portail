@@ -8,6 +8,9 @@ public class PressurePlate : MonoBehaviour {
 	private SpriteRenderer _power;
 	[SerializeField]
 	private Bridge _bridge;
+	[SerializeField]
+	private Laser _laser;
+	static private int _nbPressed = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -31,13 +34,19 @@ public class PressurePlate : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == "Cube"){
-			this.PowerOn();
+			_nbPressed += 1;
+			if(_nbPressed == 2){
+				this.PowerOn();
+				_laser.PowerOff();
+			}
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
 		if(other.gameObject.tag == "Cube"){
+			_nbPressed -= 1;
 			this.PowerOff();
+			_laser.PowerOn();
 		}
 	}
 }

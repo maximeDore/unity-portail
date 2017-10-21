@@ -27,4 +27,12 @@ public class Laser : MonoBehaviour {
 			transform.localScale = new Vector3(1,_LOCALSCALE,1);
 		}
 	}
+
+	public void PowerOn() {
+		transform.localScale = new Vector3(1,_LOCALSCALE,1);
+	}
+
+	public void PowerOff() {
+		transform.localScale = new Vector3(1,0,1);
+	}
 }
