@@ -12,6 +12,7 @@ public class PersoMover : MonoBehaviour {
 	private float _horizontal;
 	private float _vertical;
 	private float _fire;
+	// private float _vie = 1f;
 
 
 	// Use this for initialization
@@ -23,6 +24,9 @@ public class PersoMover : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(_rb.bodyType == RigidbodyType2D.Kinematic){
+			_rb.bodyType = RigidbodyType2D.Dynamic;
+		}
 		// _horizontal = Input.GetAxis("Horizontal");
 		_vertical = Input.GetAxis("Vertical");
 		// _fire = Input.GetAxis("Fire1");
@@ -33,26 +37,8 @@ public class PersoMover : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-	// 	//On détermine si une touche de mouvement est enfoncée avec un boolean
-	// 	bool isTurning = _horizontal != 0;
+	// 	//On détermine si une touche de mouvement est enfoncée
 		bool isRunning = _vertical != 0;
-
-	// 	//Animation du personnage qui cours ou idle
-		// _animator.SetBool("isRunning", isRunning);
-	// 	//Mouvement du personnage avant/arrière
-	// 	if(isRunning){
-	// 		transform.Translate(Vector3.down * _vertical * Time.deltaTime * _speed);
-	// 		// _rb.velocity = (new Vector2(0,_horizontal * _speed));
-	// 	} else {
-	// 		// _rb.velocity = Vector2.zero;
-	// 	}
-	// 	//Rotation du personnage gauche/droite
-	// 	if(isTurning) {
-	// 		transform.Rotate (Vector3.back * _horizontal * _speed);
-	// 		// _rb.rotation = _vertical * _speed;
-	// 		// _rb.AddTorque(_)
-	// 	}
-	// }
 		_animator.SetBool("isRunning", isRunning);
 		//Permet de convertir les coordonnées du curseur de pixels à des unités de Unity
 		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

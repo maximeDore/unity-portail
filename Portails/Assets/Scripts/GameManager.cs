@@ -17,11 +17,42 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	public void Jouer(){
+	public void Jouer() {
+		if(SceneManager.sceneCount>1){
+			SceneManager.UnloadSceneAsync(2);
+		}
 		SceneManager.LoadScene("Jeu");
+		if(Time.timeScale==0){
+			Time.timeScale = 1;
+		}
 	}
 
-	public void Menu(){
+	public void Instructions() {
+		SceneManager.LoadScene("Instructions");
+	}
+
+	public void Menu() {
 		SceneManager.LoadScene("Menu");
+		if(Time.timeScale==0){
+			Time.timeScale = 1;
+		}
+	}
+
+	public void Fin() {
+		SceneManager.LoadScene("Fin", LoadSceneMode.Additive);
+		Time.timeScale = 0;
+		// _perso.
+	}
+
+	public void PlayJeu(){
+		Time.timeScale = 1;
+		SceneManager.UnloadSceneAsync("PauseMenu");
+	}
+
+	public void PauseJeu(){
+		Time.timeScale = 0;
+		if(SceneManager.sceneCount<2){
+			SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+		}
 	}
 }

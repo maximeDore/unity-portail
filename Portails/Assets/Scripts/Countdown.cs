@@ -5,16 +5,25 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour {
 
-	private float _totalTime = 60.00f;
-	private Text text;
+	// [SerializeField]
+	private float _timer = 60.00f;
+	private Text _text;
+	private GameManager _gameManager;
 
 	void Start() {
-		text = GetComponent<Text>();
+		_text = GetComponent<Text>();
+		_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		_totalTime -= Time.deltaTime;
-		text.text = _totalTime.ToString("F2");
+		if(_timer>0.01f){
+			_timer -= Time.deltaTime;
+		} else {
+			_timer = 0.00f;
+			_gameManager.Fin();
+			this.enabled = false;
+		}
+		_text.text = _timer.ToString("F2");
 	}
 }

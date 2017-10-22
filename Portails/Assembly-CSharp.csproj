@@ -53,10 +53,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bridge.cs" />
      <Compile Include="Assets\Scripts\Countdown.cs" />
-     <Compile Include="Assets\Scripts\EndLevel.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Grabber.cs" />
+     <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Laser.cs" />
+     <Compile Include="Assets\Scripts\MusicSingleton.cs" />
+     <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\PersoMover.cs" />
      <Compile Include="Assets\Scripts\Porte.cs" />
      <Compile Include="Assets\Scripts\PressurePlate.cs" />
