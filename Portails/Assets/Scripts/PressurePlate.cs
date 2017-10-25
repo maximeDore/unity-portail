@@ -19,7 +19,7 @@ public class PressurePlate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	public void PowerOn(){
@@ -34,6 +34,7 @@ public class PressurePlate : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == "Cube"){
+			Debug.Log(other.gameObject.name);
 			_nbPressed += 1;
 			if(_nbPressed == 2){
 				this.PowerOn();
@@ -46,6 +47,8 @@ public class PressurePlate : MonoBehaviour {
 		if(other.gameObject.tag == "Cube"){
 			if(_nbPressed>0){
 				_nbPressed -= 1;
+			} else if(_nbPressed<0){
+				_nbPressed = 0;	//Bug où la variable devient décalée
 			}
 			this.PowerOff();
 			_laser.PowerOn();

@@ -52,7 +52,7 @@ public class Turret : MonoBehaviour {
 		float deltaY = transform.position.y - _persoRef.position.y;
 		float angle = Mathf.Atan2(deltaY,deltaX) * Mathf.Rad2Deg;
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, _laserDistance, layerMask);
-		if(hit.collider != null && hit.collider.name=="PersoContainer"){
+		if(hit.collider != null && hit.collider.name=="PersoContainer" && angle <= 40 && angle >= -40){
 			_laserLongueur = Vector2.Distance(_persoRef.position,transform.position);
 			transform.rotation = Quaternion.Euler(0,0,angle);
 			_animator.applyRootMotion = true;

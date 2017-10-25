@@ -494,7 +494,7 @@ RectTransform:
   m_Children:
   - {fileID: 2017418960}
   m_Father: {fileID: 1564243382}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -702,7 +702,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1564243382}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -776,7 +776,7 @@ RectTransform:
   m_LocalScale: {x: 0.99978304, y: 0.99978304, z: 0.99978304}
   m_Children: []
   m_Father: {fileID: 1564243382}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -833,31 +833,13 @@ GameObject:
   - component: {fileID: 1564243381}
   - component: {fileID: 1564243380}
   - component: {fileID: 1564243379}
-  - component: {fileID: 1564243378}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1564243378
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1564243377}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eaeb4d35d8ddbce44ab37956d8737c5b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &1564243379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,11 +909,11 @@ RectTransform:
   m_Children:
   - {fileID: 403883381}
   - {fileID: 2134551958}
-  - {fileID: 1183858053}
   - {fileID: 1703466618}
   - {fileID: 1432226708}
   - {fileID: 1492689058}
   - {fileID: 1676609587}
+  - {fileID: 1183858053}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -968,7 +950,7 @@ RectTransform:
   m_LocalScale: {x: 0.99978304, y: 0.99978304, z: 0.99978304}
   m_Children: []
   m_Father: {fileID: 1564243382}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1074,7 +1056,7 @@ Transform:
   m_LocalScale: {x: 1.1816839, y: 1.1816839, z: 1.1816839}
   m_Children: []
   m_Father: {fileID: 1564243382}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1789808647
 GameObject:

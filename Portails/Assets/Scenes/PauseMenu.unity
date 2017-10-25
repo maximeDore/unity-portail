@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 175281715}
   - component: {fileID: 175281714}
   m_Layer: 5
-  m_Name: btRetour
+  m_Name: btRetourMenu
   m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -301,7 +301,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0a4231b70134b2148b3b94df7a9ad8f5, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -442,7 +442,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0a4231b70134b2148b3b94df7a9ad8f5, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -483,11 +483,12 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 403742290}
+  m_TargetGraphic: {fileID: 175281716}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1651110477}
+      - m_Target: {fileID: 114437583862689964, guid: 1d8ccb7a11a870547bb1bcb9c88d87a4,
+          type: 2}
         m_MethodName: PlayJeu
         m_Mode: 1
         m_Arguments:
@@ -732,7 +733,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0a4231b70134b2148b3b94df7a9ad8f5, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -1015,12 +1016,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1d8ccb7a11a870547bb1bcb9c88d87a4, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1651110477 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114437583862689964, guid: 1d8ccb7a11a870547bb1bcb9c88d87a4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1651110476}
-  m_Script: {fileID: 11500000, guid: b0b165b4c0955aa48a98e58178c47395, type: 3}
 --- !u!1 &1738388824
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,24 +22,11 @@ public class HealthBar : MonoBehaviour {
 		 _percent = GameObject.Find("percent").GetComponent<Text>();
 	 }
      
-    //  void OnGUI() {
-    //     //draw the background
-    //     GUI.BeginGroup(new Rect(pos.x, pos.y, size.x, size.y));
-	// 	GUI.Box(new Rect(0,0, size.x, size.y), emptyTex);
-         
-	// 	//draw the filled-in part
-
-	// 	GUI.BeginGroup(new Rect(0,0, size.x * _vie, size.y));
-	// 	GUI.Box(new Rect(0,0, size.x, size.y), fullTex);
-	// 	GUI.EndGroup();
-    //     GUI.EndGroup();
-    //  }
-     
      void Update() {
 		 if(_isHit){
          	_vie -= 0.5f * Time.deltaTime;
 		 } else if(_vie<1) {
-			 _vie += 0.1f * Time.deltaTime;
+			 _vie += 0.05f * Time.deltaTime;
 		 }
 		 if(_vie<=0){
 			_gameManager.Fin();

@@ -1858,7 +1858,7 @@ RectTransform:
   m_GameObject: {fileID: 736303837}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.45, z: 1}
   m_Children: []
   m_Father: {fileID: 231168318}
   m_RootOrder: 2
@@ -1866,7 +1866,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 160, y: 20}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &736303839
 MonoBehaviour:
@@ -1889,7 +1889,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0aa26cd0187768f48a6298d8a9d97001, type: 3}
-    m_FontSize: 8
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -3315,7 +3315,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1702773181}
   - component: {fileID: 1702773183}
-  - component: {fileID: 1702773182}
   m_Layer: 0
   m_Name: End
   m_TagString: Finish
@@ -3336,17 +3335,6 @@ Transform:
   m_Father: {fileID: 445664372}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1702773182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1702773180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 966a17e634f321d44a9c13e6137c2229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1702773183
 BoxCollider2D:
   m_ObjectHideFlags: 0
