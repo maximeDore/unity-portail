@@ -41,11 +41,6 @@ public class Turret : MonoBehaviour {
         // Gizmos.DrawGUITexture(new Rect(_laserEmitter.position.x, _laserEmitter.position.y, 1, 2), _textureLaser);
     }
 
-	void OnGUI() {
-		// GUI.Label(new Rect(this.transform.position.x, this.transform.position.y, _textureLaser.width, _textureLaser.height), _textureLaser);
-		
-	}
-
 	//Raycast de suivi du personnage
 	void followPerso(LayerMask layerMask) {
 		float deltaX = transform.position.x - _persoRef.position.x;

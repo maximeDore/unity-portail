@@ -8,7 +8,6 @@ public class Grabber : MonoBehaviour {
 	private Rigidbody2D _grabbedItem;
 	private FixedJoint2D _joint;
 
-
 	private static string TagName = "Cube";
 
 	// Use this for initialization
@@ -19,7 +18,8 @@ public class Grabber : MonoBehaviour {
 	}
 
 	/// Update is called every frame, if the MonoBehaviour is enabled.
-	void Update()
+	void Update() 
+	
 	{
 		if(Input.GetKeyDown(KeyCode.Space) && _accessibleItems.Count!=0){
 			//Grab item
@@ -32,8 +32,7 @@ public class Grabber : MonoBehaviour {
 	
 	/// Sent when an incoming collider makes contact with this object's
 	/// collider (2D physics only).
-	void OnCollisionEnter2D(Collision2D other)
-	{
+	void OnCollisionEnter2D(Collision2D other){
 		if(other.gameObject.tag==TagName){
 			if(other.rigidbody!=null && !_accessibleItems.Contains(other.rigidbody)){
 				_accessibleItems.Add(other.rigidbody);
@@ -43,8 +42,7 @@ public class Grabber : MonoBehaviour {
 
 	/// Sent when a collider on another object stops touching this
 	/// object's collider (2D physics only).
-	void OnCollisionExit2D(Collision2D other)
-	{
+	void OnCollisionExit2D(Collision2D other) {
 		if(other.gameObject.tag==TagName){
 			if(_accessibleItems.Contains(other.rigidbody)){
 				_accessibleItems.Remove(other.rigidbody);

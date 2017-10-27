@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Bridge.cs" />
      <Compile Include="Assets\Scripts\Countdown.cs" />
+     <Compile Include="Assets\Scripts\EndGame.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Grabber.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />

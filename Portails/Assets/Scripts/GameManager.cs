@@ -39,9 +39,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Fin() {
-		SceneManager.LoadScene("Fin", LoadSceneMode.Additive);
+		SceneManager.LoadScene("Failure", LoadSceneMode.Additive);
 		Time.timeScale = 0;
-		// _perso.
+	}
+
+	public void FinJeu(){
+		SceneManager.LoadScene("Fin");
 	}
 
 	public void PlayJeu(){

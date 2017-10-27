@@ -34,9 +34,9 @@ public class PressurePlate : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == "Cube"){
-			Debug.Log(other.gameObject.name);
 			_nbPressed += 1;
-			if(_nbPressed == 2){
+			Debug.Log(_nbPressed);
+			if(_nbPressed >= 2){
 				this.PowerOn();
 				_laser.PowerOff();
 			}

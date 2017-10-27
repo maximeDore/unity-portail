@@ -9,15 +9,6 @@ public class Warp : MonoBehaviour {
 	public static bool _cooldown = false;
 	public static float _cooldownDuration = 999f;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	// Téléporte le joueur vers l'autre portail lorsqu'il touche le portail
 	void OnTriggerStay2D(Collider2D other){
 		Invoke("Cooldown",1);
