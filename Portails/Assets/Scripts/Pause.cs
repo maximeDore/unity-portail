@@ -10,6 +10,16 @@ public class Pause : MonoBehaviour {
 		_gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 	}
 
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			if(Time.timeScale == 1){
+				PauseJeu();
+			} else if(Time.timeScale == 0) {
+				PlayJeu();
+			}
+		}
+	}
+
 	void PauseJeu() {
 		_gameManager.PauseJeu();
 		Time.timeScale = 0;	//Gèle la scène de jeu

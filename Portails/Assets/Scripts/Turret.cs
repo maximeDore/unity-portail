@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Turret : MonoBehaviour {
-
-	[SerializeField]
-	private Transform _laserEmitter;
+	
 	[SerializeField]
 	private Transform _persoRef;
 	[SerializeField]
@@ -35,13 +33,6 @@ public class Turret : MonoBehaviour {
 		followPerso(_raycastLayerMask);
 	}
 
-	//Dessine un rayon laser devant la tourelle
-    void OnDrawGizmos() {
-        Gizmos.color = Color.red;
-        direction = transform.TransformDirection(Vector2.left) * _laserLongueur;
-        Gizmos.DrawRay(_laserEmitter.position, direction);
-    }
-
 	//Raycast de suivi du personnage
 	void followPerso(LayerMask layerMask) {
 		_rapportScale = _LASERDEFAULTSCALE/_LASERDISTANCE;	//rapport de taille du sprite du laser selon la longueur du Ray en gizmo
@@ -50,6 +41,7 @@ public class Turret : MonoBehaviour {
 		float deltaX = transform.position.x - _persoRef.position.x;
 		float deltaY = transform.position.y - _persoRef.position.y;
 		float angle = Mathf.Atan2(deltaY,deltaX) * Mathf.Rad2Deg;
+        direction = transform.TransformDirection(Vector2.left) * _laserLongueur;
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, _LASERDISTANCE, layerMask);
 		if(hit.collider != null && hit.collider.name=="PersoContainer" && angle <= 40 && angle >= -40){	//si le raycast détecte le perso et qu'il est dans le champs de vision
 			_laserLongueur = Vector2.Distance(_persoRef.position,transform.position);

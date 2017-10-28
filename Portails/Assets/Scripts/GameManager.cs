@@ -65,4 +65,9 @@ public class GameManager : MonoBehaviour {
 			SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
 		}
 	}
+
+	//Quitter l'application
+	public void QuitterJeu() {
+		Application.Quit();
+	}
 }
