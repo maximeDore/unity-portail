@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour {
 	 private bool _isHit = false;
 	 private Slider _healthSlider;
 	 private Text _percent;
-	 
+	 //Getter/Setter
 	 public bool IsHit {
 		 get { return _isHit; }
 		 set { _isHit = value; }
@@ -23,12 +23,12 @@ public class HealthBar : MonoBehaviour {
 	 }
      
      void Update() {
-		 if(_isHit){
+		 if(_isHit){	//Si la tourelle signale que le personnage est touché
          	_vie -= 0.5f * Time.deltaTime;
 		 } else if(_vie<1) {
 			 _vie += 0.05f * Time.deltaTime;
 		 }
-		 if(_vie<=0){
+		 if(_vie<=0){	//Si le personnage n'a plus de vie, le joueur perd la partie
 			_gameManager.Fin();
 			this.enabled = false;
 		 }

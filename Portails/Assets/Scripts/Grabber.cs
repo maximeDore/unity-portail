@@ -7,6 +7,7 @@ public class Grabber : MonoBehaviour {
 	private List<Rigidbody2D> _accessibleItems;
 	private Rigidbody2D _grabbedItem;
 	private FixedJoint2D _joint;
+	private AudioSource _sfx;
 
 	private static string TagName = "Cube";
 
@@ -15,23 +16,23 @@ public class Grabber : MonoBehaviour {
 		_accessibleItems = new List<Rigidbody2D>();
 		_joint = GetComponent<FixedJoint2D>();
 		_grabbedItem = GetComponent<Rigidbody2D>();
+		_sfx = GetComponent<AudioSource>();
 	}
 
 	/// Update is called every frame, if the MonoBehaviour is enabled.
-	void Update() 
-	
-	{
+	void Update() {	
 		if(Input.GetKeyDown(KeyCode.Space) && _accessibleItems.Count!=0){
-			//Grab item
+			//Grab item à l'appui de la touche espace
 			GrabItem(_accessibleItems[0]);
 		}else if(Input.GetKeyUp(KeyCode.Space) && _grabbedItem!=null){
-			//Release item
+			//Release item au relachement de la touche espace
 			ReleaseGrabbedItem();
 		}
 	}
 	
 	/// Sent when an incoming collider makes contact with this object's
 	/// collider (2D physics only).
+	//  Si le perso touche un cube, on l'ajoute à la liste des objets accessibles
 	void OnCollisionEnter2D(Collision2D other){
 		if(other.gameObject.tag==TagName){
 			if(other.rigidbody!=null && !_accessibleItems.Contains(other.rigidbody)){
@@ -42,6 +43,7 @@ public class Grabber : MonoBehaviour {
 
 	/// Sent when a collider on another object stops touching this
 	/// object's collider (2D physics only).
+	//  Si le perso ne touche plus un cube, on le retire de la liste des objets accessibles
 	void OnCollisionExit2D(Collision2D other) {
 		if(other.gameObject.tag==TagName){
 			if(_accessibleItems.Contains(other.rigidbody)){
@@ -52,25 +54,20 @@ public class Grabber : MonoBehaviour {
 
 	/// Permet de déplacer l'item donné à l'aide d'un FixedJoint2D
 	void GrabItem(Rigidbody2D item){
-		//Activer la jointure
-		_joint.enabled = true;
-		//Lier la jointure à l'item passé en paramètre
-		_joint.connectedBody = item;
-		//Changer le type de RigidBody de Kinematic à Dynamic
-		item.bodyType = RigidbodyType2D.Dynamic;
+		_joint.enabled = true;	//Activer la jointure
+		_joint.connectedBody = item;	//Lier la jointure à l'item passé en paramètre
+		item.bodyType = RigidbodyType2D.Dynamic;	//Changer le type de RigidBody de Kinematic à Dynamic
 		item.freezeRotation = false;		
 		_grabbedItem = item;
-
+		_sfx.Play();
 	}
 
 	/// Libère l'objet capturé.
 	void ReleaseGrabbedItem(){
-		//Changer le type de RigidBody de Dynamic à Kinematic
-		_grabbedItem.freezeRotation = true;		
-		_grabbedItem.bodyType = RigidbodyType2D.Kinematic;
-		//Désactiver la jointure et remettre la propriété nulle
-		_joint.enabled = false;
-		_grabbedItem.velocity = Vector2.zero;
+		_grabbedItem.freezeRotation = true;	//empêche l'objet de tourner sur lui-même au relâchement
+		_grabbedItem.bodyType = RigidbodyType2D.Kinematic;	//Changer le type de RigidBody de Dynamic à Kinematic	
+		_joint.enabled = false;	//Désactiver la jointure et remettre la propriété nulle
+		_grabbedItem.velocity = Vector2.zero;	//supprimer le mouvement de l'objet
 		_grabbedItem = null;
 	}
 }

@@ -17,8 +17,9 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	//Affichage de la scène de jeu
 	public void Jouer() {
-		if(SceneManager.sceneCount>1){
+		if(SceneManager.sceneCount>1){	//Détruit la scène d'échec dans le cas où elle est instantiée sur la scène de jeu
 			SceneManager.UnloadSceneAsync(2);
 		}
 		SceneManager.LoadScene("Jeu");
@@ -27,10 +28,12 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	//Affichage de la scène des instructions
 	public void Instructions() {
 		SceneManager.LoadScene("Instructions");
 	}
 
+	//Affichage de la scène du menu principal
 	public void Menu() {
 		SceneManager.LoadScene("Menu");
 		if(Time.timeScale==0){
@@ -38,20 +41,24 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	//Ajout de la scène d'échec de la partie
 	public void Fin() {
 		SceneManager.LoadScene("Failure", LoadSceneMode.Additive);
 		Time.timeScale = 0;
 	}
 
+	//Affichage de la scène finale de succès de la partie
 	public void FinJeu(){
 		SceneManager.LoadScene("Fin");
 	}
 
+	//Destruction le menu pause
 	public void PlayJeu(){
 		Time.timeScale = 1;
 		SceneManager.UnloadSceneAsync("PauseMenu");
 	}
 
+	//Ajout du menu pause
 	public void PauseJeu(){
 		Time.timeScale = 0;
 		if(SceneManager.sceneCount<2){

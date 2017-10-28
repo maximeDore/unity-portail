@@ -9,7 +9,7 @@ public class MusicSingleton : MonoBehaviour {
 		get { return instance; }
 	}
 	
-
+	//Si le son est en double, détruire les éléments répétitifs
 	 void Awake() {
 		if (instance != null && instance != this) {
 			Destroy(this.gameObject);
@@ -17,16 +17,6 @@ public class MusicSingleton : MonoBehaviour {
 		} else {
 			instance = this;
 		}
-		DontDestroyOnLoad(this.gameObject);
-	}
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		DontDestroyOnLoad(this.gameObject);	//Conserve la musique sur la scène en tout temps
 	}
 }

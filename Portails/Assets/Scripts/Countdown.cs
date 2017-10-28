@@ -16,6 +16,7 @@ public class Countdown : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	// Début du compte à rebours
 	void Update () {
 		if(_timer>0.01f){
 			_timer -= Time.deltaTime;
@@ -24,6 +25,6 @@ public class Countdown : MonoBehaviour {
 			_gameManager.Fin();
 			this.enabled = false;
 		}
-		_text.text = _timer.ToString("F2");
+		_text.text = _timer.ToString("F2");	//Affichage du texte avec deux décimales
 	}
 }

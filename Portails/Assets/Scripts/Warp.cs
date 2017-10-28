@@ -7,12 +7,11 @@ public class Warp : MonoBehaviour {
 	[SerializeField]
 	private Transform _portal;
 	public static bool _cooldown = false;
-	public static float _cooldownDuration = 999f;
 
 	// Téléporte le joueur vers l'autre portail lorsqu'il touche le portail
 	void OnTriggerStay2D(Collider2D other){
-		Invoke("Cooldown",1);
-		if(other.gameObject.tag == "Perso" && _cooldown == false){
+		Invoke("Cooldown",1);	//appelle la fonction avec un délai d'une seconde
+		if(_cooldown == false){
 			other.transform.position = _portal.transform.position;
 			other.transform.Rotate (Vector3.back*180);
 			Warp._cooldown = true;

@@ -532,7 +532,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Vous avez pris trop de temps...
+  m_Text: Vous avez perdu...
 --- !u!222 &1371154090
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -11,11 +11,6 @@ public class Porte : MonoBehaviour {
 	void Start () {
 		_animator = GetComponent<Animator>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	/// Sent when another object enters a trigger collider attached to this
 	/// object (2D physics only).

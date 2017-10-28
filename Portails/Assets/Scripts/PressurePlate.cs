@@ -12,30 +12,22 @@ public class PressurePlate : MonoBehaviour {
 	private Laser _laser;
 	static private int _nbPressed = 0;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
-
+	//Déploie le pont
 	public void PowerOn(){
 		_power.enabled = false;
 		_bridge.Deploy();
 	}
 
+	//Éteint le pont
 	public void PowerOff(){
 		_power.enabled = true;
 		_bridge.Shut();
 	}
 
+	//Détecte si un cube est sur la plaque de pression
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.tag == "Cube"){
 			_nbPressed += 1;
-			Debug.Log(_nbPressed);
 			if(_nbPressed >= 2){
 				this.PowerOn();
 				_laser.PowerOff();
@@ -43,6 +35,7 @@ public class PressurePlate : MonoBehaviour {
 		}
 	}
 
+	//Détecte si un cube quitte la plaque de pression
 	void OnTriggerExit2D(Collider2D other) {
 		if(other.gameObject.tag == "Cube"){
 			if(_nbPressed>0){

@@ -10,6 +10,7 @@ public class EndGame : MonoBehaviour {
 		_gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 	}
 
+	//Détecte si le personnage a atteint la fin du niveau
 	void OnTriggerEnter2D(Collider2D other)	{
 		_gameManager.FinJeu();
 	}
